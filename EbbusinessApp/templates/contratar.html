@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}
+EBBUSINESS
+{% endblock title %}
+{% block content %}
+{% load static %}
+<header>   
+    <div class="banner" >
+        <h1>CONTRATAR</h1>
+        <nav>
+            <ul>                             
+                <li><a href="{% url 'index' %}" target="blank">Home</a></li>
+                <li><a href="{% url 'a_empresa' %}" target="blank">A empresa</a></li>  
+                <li><a href="{% url 'nossos_planos' %}" target="blank">Nossos planos</a></li>
+                <li><a href="{% url 'fale_conosco' %}" target="blank">Fale conosco</a></li>               
+            </ul>
+        </nav>        
+    </div>    
+</header>
+<br/>
+<br/>
+<div class="desc8">
+    <br/>
+    <h3>PARA CONTRATAR UM DE NOSSOS PLANOS PREENCHA O FORMULÁRIO ABAIXO E EM BREVE UM DOS NOSSOS
+        REPRESENTANTES ENTRARÁ EM CONTATO.</h3>
+</div>
+    
+<br/>
+<br/>
+<br/>
+    <div class="contato">
+      
+        <form action="." method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class="button" value="Enviar">
+        </form>           
+    </div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="rodape"> 
+    <footer>
+        <p>Ebbusiness</p>
+        <p>Endereço: Rua Indaiatuba, nº 00 Jardim Indaiatuba , Indaiatuba - SP</p>
+        <p>Telefone: 1111-1111 Email: ebbusiness@ebusiness.com.br</p>
+    </footer>
+</div>
+
+{% endblock %}

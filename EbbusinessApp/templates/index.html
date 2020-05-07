@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% block title %}
+EBBUSINESS
+{% endblock title %}
+{% block content %}
+{% load static %}
+<header>   
+    <div class="banner">
+        <h1>EBBUSINESS</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'a_empresa' %}" target="blank">A empresa</a></li>
+                <li><a href="{% url 'nossos_planos' %}" target="blank">Nossos planos</a></li>
+                <li><a href="{% url 'contratar' %}" target="blank">Contratar</a></li> 
+                <li><a href="{% url 'fale_conosco' %}" target="blank">Fale conosco</a></li>
+                              
+            </ul>
+        </nav>       
+    </div>
+</header>
+<br/>
+<br/>
+<br/>
+<div class="desc0">
+    <h1><strong>VIAGENS A NEGÓCIOS É COM A EBBUSINESS</strong></h1>
+</div>
+
+    <div class="desc1">
+        <br/>
+        <br/>
+        <br/>
+        <h2>Vai viajar a negócios?<br/>Então conte com a EBBUSINESS!</h2>        
+    </div>  
+    <div class="desc2">
+        <br/>
+        <br/>
+        <br/>
+        <h2>Não se preocupe mais em fazer reservas!<br/>A EBBUSINESS fará para você!</h2>        
+    </div>   
+    <div class="desc3">
+        <br/>
+        <br/>
+        <br/>
+        <h2>Se preocupe só com os negócios.<br/>A EBBUSINESS se preocupa com o resto!</h2>        
+    </div>    
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="desc4">
+        <br/>
+        <br/>
+        <br/>
+        <h2>A EBBUSINESS FOI CRIADA COM O OBJETIVO DE FACILITAR AS VIAGENS DE NEGÓCIOS.</h2>
+        <h2>REALIZANDO A COMPRA OU RESERVA DE PASSAGENS AÉREAS, DIÁRIAS EM HOTÉIS E ALUGUÉIS DE AUTOMÓVEIS.</h2> 
+        <h2>TUDO ISSO PARA QUE O NOSSO CLIENTE SE PREOCUPE APENAS EM FAZER NEGÓCIO.</h2>
+    </div>       
+<br/>
+<br/>
+<br/>
+<h1><strong>SAIBA MAIS SOBRE NOSSOS PLANOS:</strong></h1>
+<br/>
+<div class="desc5">
+    <br/>
+    <br/>
+    <br/>
+    <h2><strong>CLASSICAL</strong></h2> 
+    <li><a href="{% url 'nossos_planos' %}" target="blank">Clique aqui</a></li>
+</div>  
+<div class="desc6">
+    <br/>
+    <br/>
+    <br/>
+    <h2><strong>EXECUTIVE</strong></h2>   
+    <li><a href="{% url 'nossos_planos' %}" target="blank">Clique aqui</a></li>        
+</div>   
+<div class="desc7">
+    <br/>
+    <br/>
+    <br/>
+    <h2><strong>FIRST CLASS</strong></h2>    
+    <li><a href="{% url 'nossos_planos' %}" target="blank">Clique aqui</a></li>       
+</div>    
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<div class="parceiros">
+    <h1><strong>NOSSOS PARCEIROS:</strong></h1>
+    <br/>
+    
+    <img src="{% static "media/airbnb.jpg" %}" alt="My image" width="14%" height="14%">
+    <img src="{% static "media/american_airlines.jpg" %}" alt="My image" width="15%" height="15%">
+    <img src="{% static "media/budget.png" %}" alt="My image" width="13%" height="13%">
+    <img src="{% static "media/hilton.png" %}" alt="My image" width="11.55%" height="11.5%">
+    <img src="{% static "media/ibis.png" %}" alt="My image" width="7.2%" height="7.2%">
+    <img src="{% static "media/latam.png" %}" alt="My image" width="7.5%" height="10%">
+    <img src="{% static "media/localiza.png" %}" alt="My image" width="15%" height="15%">
+    <img src="{% static "media/movida.png" %}" alt="My image" width="15%" height="15%">
+    <img src="{% static "media/uber.png" %}" alt="My image" width="14%" height="14%">  
+</div>
+<br/>
+<br/>
+<br/>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<div class="rodape"> 
+    <footer>
+        <p>Ebbusiness</p>
+        <p>Endereço: Rua Indaiatuba, nº 00 Jardim Indaiatuba , Indaiatuba - SP</p>
+        <p>Telefone: 1111-1111 Email: ebbusiness@ebusiness.com.br</p>
+    </footer>
+</div>
+{% endblock %}

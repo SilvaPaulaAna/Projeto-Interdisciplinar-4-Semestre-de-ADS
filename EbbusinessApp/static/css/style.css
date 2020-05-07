@@ -1,0 +1,351 @@
+body {  
+    background-image: url(../media/fundo.jpg);
+    background-attachment: fixed;  
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0; 
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Helvetica Neue", sans-serif;
+    color:white;
+    text-align: center;    
+}
+.banner{  
+    margin:0;   
+    background-color:rgba(0, 0, 0, .5);
+    height: 76px;
+    padding: 60px 60px 60px 60px;     
+}
+.banner h1 {
+    color:#ADBFB9;
+    float: left;
+    margin: 0;
+    font-size: 50px;
+}
+.banner nav{
+    float:right;
+    position: relative;
+    top: 30px;
+}
+.banner ul {
+    margin: 0;
+}
+.banner nav ul li{    
+    display: inline-block;
+    width: 200px;
+}
+.banner nav ul li a {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    float: right;
+}
+
+
+.rodape {
+    background-color:#3A403E;
+    color: black;
+    padding: 35px 0 30px 0; 
+    font-size: 14px;
+    text-align: center;   
+
+}
+.containers{
+    color:white;
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;   
+    align-items: center;
+}
+
+.tabela_planos{
+    background-color: #737F7B;
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 68%;
+}
+.tabela_planos td,
+.tabela_planos th{
+    border: 1px #000 solid;
+    font-size: 12px;
+    padding: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 20%;
+}
+.opcoes{
+    color: white;
+} 
+.contato{
+    width: 500px;
+    padding: 20px;
+    background: #ADBFB9;
+    overflow:auto;
+    margin: 0 auto;
+    /* Border style */
+    border: 1px solid #cccccc;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px; 
+    /* Border Shadow */
+    -moz-box-shadow: 2px 2px 2px #cccccc;
+    -webkit-box-shadow: 2px 2px 2px #cccccc;
+    box-shadow: 2px 2px 2px #cccccc;
+}
+
+label {
+    font-family: Arial, Verdana;
+    text-shadow: 2px 2px 2px #3A403E;
+    display: block;
+    float: left; 
+    margin-right:15px;
+    font-weight: bold;
+    margin-right:10px;
+    text-align: right;
+    width: 120px;
+    line-height: 25px;
+    font-size: 20px;
+}
+.button{
+    float: center; 
+    margin-left:15px;
+    margin:20px 55px 20px 0;
+    font-weight: bold;
+    line-height: 1;
+    padding: 6px 10px;
+    cursor:pointer;
+    color: #fff;
+  
+    text-align: center;
+    text-shadow: 0 1px 1px #64799e;
+  
+    /* Background gradient */
+    background: #a5b8da;
+    background: -moz-linear-gradient
+       (top, #a5b8da 0%, #7089b3 100%);
+    background: -webkit-gradient
+       (linear, 0% 0%, 0% 100%,
+       from(#a5b8da), to(#7089b3));
+  
+    /* Border style */
+    border: 1px solid #5c6f91;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  
+    /* Box shadow */
+    -moz-box-shadow: inset 0 1px 0 0 #aec3e5;
+    -webkit-box-shadow: inset 0 1px 0 0 #aec3e5;
+    box-shadow: inset 0 1px 0 0 #aec3e5;
+  
+}
+.img1 {
+background-color: #181B24;
+border: 2px 
+transparent #ccc;
+font-size: 14px;
+color: white;
+float: left;
+margin-left: 10px;
+height: 820px;
+width: 400px;
+margin-top: 120px;
+text-shadow: 2px 2px 2px black;
+
+}
+.img2{
+background-color: #26242F;
+border: 2px 
+transparent #ccc;
+font-size: 14px;
+color: white;
+float: left;
+left: 30px;
+height: 820px;
+width: 400px;
+margin-top: 60px;
+margin: 60px;
+text-shadow: 2px 2px 2px black;
+}
+.img3{
+background-color: #3B393B;
+border: 2px 
+transparent #ccc;
+color: white;
+font-size: 14px;
+float: left;
+height:820px;
+width: 400px;
+left: 80px;
+text-shadow: 2px 2px 2px black;
+}
+.img1 h1,.img2 h1,.img3 h1{
+    color: #DED3D4;
+    text-shadow: 2px 2px 2px black;
+}
+
+h1{
+    color: black;
+    text-shadow: 2px 2px 2px white;
+}
+.desc1{
+background-image: url(../media/aviao2.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+border: 2px 
+transparent #BCB9AE;
+font-size: 14px;
+float: left;
+margin-left: 60px;
+height: 200px;
+width: 400px;
+margin-top: 30px;
+text-shadow: 2px 2px 2px black;
+
+}
+
+.desc1 h2,.desc2 h2, .desc3 h2,.desc4 h2{
+color: white
+
+}
+
+.desc2{
+background-image: url(../media/hotel.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+border: 2px 
+transparent #BCB9AE;
+font-size: 14px;
+float: left;
+left: 30px;
+margin-left: 10px;
+height: 200px;
+width: 400px;
+margin-top: 30px;
+text-shadow: 2px 2px 2px black;
+}
+.desc3{
+background-image: url(../media/carro.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+border: 2px 
+transparent #BCB9AE;
+font-size: 14px;
+float: left;
+left: 30px;
+margin-left: 10px;
+height: 200px;
+width: 400px;
+margin-top: 30px;
+text-shadow: 2px 2px 2px black;
+}
+.desc4{
+background-color: #778A8C;
+border: 2px 
+transparent #BCB9AE;
+font-size: 12px;
+float: center;
+margin-left: 20px;
+height: 200px;
+width: 1310px;
+}
+.desc5{
+background-color: #181B24;
+border: 2px 
+transparent #BCB9AE;
+font-size: 18px;
+float: left;
+margin-left: 60px;
+height: 200px;
+width: 400px;
+margin-top: 30px;
+}
+.desc5 li a,.desc6 li a,.desc7 li a {
+color: white;
+font-size: 14px;
+text-decoration: none;
+list-style-type: none;   
+}
+.desc6{
+background-color: #26242F;
+border: 2px 
+transparent #BCB9AE;
+font-size: 18px;
+float: left;
+left: 30px;
+margin-left: 10px;
+height: 200px;
+width: 400px;
+margin-top: 30px;
+}
+.desc7{
+background-color: #3B393B;
+border: 2px 
+transparent #BCB9AE;
+font-size: 18px;
+float: left;
+left: 30px;
+margin-left: 10px;
+height: 200px;
+width: 400px;
+margin-top: 30px;
+}
+.desc8{
+background-color: #778A8C;
+border: 2px 
+transparent #BCB9AE;
+font-size: 20px;
+float: center;
+margin-left: 20px;
+height: 150px;
+width: 1310px;
+}
+.item_1{
+background-color: #061129;
+border: 2px 
+transparent #BCB9AE;
+font-size: 16px;
+font-style: oblique;
+float: center;
+margin-left: 10px;
+height: 300px;
+width: 1330px;
+text-align: center;
+}
+.item_2{
+background-color: #061129;
+border: 2px 
+transparent #BCB9AE;
+font-size: 16px;
+float: left;
+margin-left: 10px;
+height: 250px;
+width: 400px;
+margin-top: 174px;
+}
+.item_3{
+    background-color: #061129;
+    border: 2px 
+    transparent #BCB9AE;
+    font-size: 16px;
+    float: left;
+    left: 30px;
+    margin-left: 10px;
+    height: 250px;
+    width: 400px;
+    margin-top: 87px;
+    }
+    .item_4{
+        background-color: #061129;
+        border: 2px 
+        transparent #BCB9AE;
+        font-size: 16px;
+        float: left;
+        left: 30px;
+        margin-left: 10px;
+        height: 250px;
+        width: 512px;
+        margin-top: 0px;
+    }
