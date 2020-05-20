@@ -4,121 +4,214 @@ EBBUSINESS
 {% endblock title %}
 {% block content %}
 {% load static %}
-<header>   
-    <div class="banner">
-        <h1>EBBUSINESS</h1>
-        <nav>
-            <ul>
-                <li><a href="{% url 'a_empresa' %}" target="blank">A empresa</a></li>
-                <li><a href="{% url 'nossos_planos' %}" target="blank">Nossos planos</a></li>
-                <li><a href="{% url 'contratar' %}" target="blank">Contratar</a></li> 
-                <li><a href="{% url 'fale_conosco' %}" target="blank">Fale conosco</a></li>
-                              
-            </ul>
-        </nav>       
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark"style="background-color: rgba(0, 0, 0, .5)"; >
+        <a class="navbar-brand" href="#">EBBUSINESS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'a_empresa' %}">A empresa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'nossos_planos' %}">Nossos Planos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contratar' %}">Contratar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'fale_conosco' %}">Fale conosco</a>
+            </li>
+          </ul>
+        </div>
+      </nav>   
+</header>  
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="imgCarousel" width="100%" height="500" src="{% static "media/aviao.jpg" %}"  alt="Foto:Avião">
+        <div class="carousel-caption d-none d-md-block">
+          <div id="textoCarousel1">
+            <h1>Viagens</h1>
+          <p>Não se preocupe mais com as compras de passagens aéreas!</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="imgCarousel"width="100%" height="500" src="{% static "media/hotel.jpg" %}" alt="Foto:Hotel">
+        <div class="carousel-caption d-none d-md-block">
+          <div id="textoCarousel2">
+            <h1>Hospedagem</h1>
+            <p>Fique tranquilo nós faremos a reserva para você!</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="imgCarousel" width="100%" height="500" src="{% static "media/carro.jpg" %}" alt="Foto: Carro">
+        <div class="carousel-caption d-none d-md-block">
+          <div id="textoCarousel3">
+            <h1>Automóveis</h1>
+            <p>Locação e seguro? Deixe por nossa conta!</p>
+          </div>
+        </div>
+      </div>
     </div>
-</header>
-<br/>
-<br/>
-<br/>
-<div class="desc0">
-    <h1><strong>VIAGENS A NEGÓCIOS É COM A EBBUSINESS</strong></h1>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Próximo</span>
+    </a>
+  </div>
 </div>
 
-    <div class="desc1">
-        <br/>
-        <br/>
-        <br/>
-        <h2>Vai viajar a negócios?<br/>Então conte com a EBBUSINESS!</h2>        
-    </div>  
-    <div class="desc2">
-        <br/>
-        <br/>
-        <br/>
-        <h2>Não se preocupe mais em fazer reservas!<br/>A EBBUSINESS fará para você!</h2>        
-    </div>   
-    <div class="desc3">
-        <br/>
-        <br/>
-        <br/>
-        <h2>Se preocupe só com os negócios.<br/>A EBBUSINESS se preocupa com o resto!</h2>        
-    </div>    
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <div class="desc4">
-        <br/>
-        <br/>
-        <br/>
-        <h2>A EBBUSINESS FOI CRIADA COM O OBJETIVO DE FACILITAR AS VIAGENS DE NEGÓCIOS.</h2>
-        <h2>REALIZANDO A COMPRA OU RESERVA DE PASSAGENS AÉREAS, DIÁRIAS EM HOTÉIS E ALUGUÉIS DE AUTOMÓVEIS.</h2> 
-        <h2>TUDO ISSO PARA QUE O NOSSO CLIENTE SE PREOCUPE APENAS EM FAZER NEGÓCIO.</h2>
-    </div>       
+
+<br/>
+
+
+<div id="tituloEbbusiness" class="container container-fluid">
+  <p>EBBUSINESS</p>
+</div>
+
+
 <br/>
 <br/>
-<br/>
-<h1><strong>SAIBA MAIS SOBRE NOSSOS PLANOS:</strong></h1>
-<br/>
-<div class="desc5">
-    <br/>
-    <br/>
-    <br/>
-    <h2><strong>CLASSICAL</strong></h2> 
-    <li><a href="{% url 'nossos_planos' %}" target="blank">Clique aqui</a></li>
-</div>  
-<div class="desc6">
-    <br/>
-    <br/>
-    <br/>
-    <h2><strong>EXECUTIVE</strong></h2>   
-    <li><a href="{% url 'nossos_planos' %}" target="blank">Clique aqui</a></li>        
-</div>   
-<div class="desc7">
-    <br/>
-    <br/>
-    <br/>
-    <h2><strong>FIRST CLASS</strong></h2>    
-    <li><a href="{% url 'nossos_planos' %}" target="blank">Clique aqui</a></li>       
+
+
+<div id="textoDeApresentacao" class="container container-fluid" >
+  <br/>
+  <p>A EBBUSINESS FOI CRIADA COM O OBJETIVO DE FACILITAR AS VIAGENS DE NEGÓCIOS.</p>
+  <p>REALIZANDO A COMPRA OU RESERVA DE PASSAGENS AÉREAS, DIÁRIAS EM HOTÉIS E ALUGUÉIS DE AUTOMÓVEIS.<p> 
+  <p>TUDO ISSO PARA QUE O NOSSO CLIENTE SE PREOCUPE APENAS EM FAZER NEGÓCIO.</p>
+  <br/>
 </div>    
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+
+
 <br/>
 <br/>
 <br/>
 
-<div class="parceiros">
-    <h1><strong>NOSSOS PARCEIROS:</strong></h1>
-    <br/>
-    
-    <img src="{% static "media/airbnb.jpg" %}" alt="My image" width="14%" height="14%">
-    <img src="{% static "media/american_airlines.jpg" %}" alt="My image" width="15%" height="15%">
-    <img src="{% static "media/budget.png" %}" alt="My image" width="13%" height="13%">
-    <img src="{% static "media/hilton.png" %}" alt="My image" width="11.55%" height="11.5%">
-    <img src="{% static "media/ibis.png" %}" alt="My image" width="7.2%" height="7.2%">
-    <img src="{% static "media/latam.png" %}" alt="My image" width="7.5%" height="10%">
-    <img src="{% static "media/localiza.png" %}" alt="My image" width="15%" height="15%">
-    <img src="{% static "media/movida.png" %}" alt="My image" width="15%" height="15%">
-    <img src="{% static "media/uber.png" %}" alt="My image" width="14%" height="14%">  
+
+<div id="tituloSobrePlanos" class="container container-fluid">
+  <p>SAIBA MAIS SOBRE NOSSOS PLANOS:</p>
 </div>
+
+
+<br/>
+<br/>
+
+
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card">
+      <img class="card-img-top" src="{% static "media/pacote.png" %}" alt="Imagem de capa do card">
+      <div class="card-bodyClassical">
+        <h3 class="card-title">CLASSICAL</h3>
+        <p class="card-text"></p>
+        <br/>
+        <a href="{% url 'nossos_planos' %}" class="btn btn-primary" >Visitar</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <img class="card-img-top" src="{% static "media/pacote.png" %}" alt="Imagem de capa do card">
+      <div class="card-bodyExecutive">
+        <h3 class="card-title">EXECUTIVE</h3>
+        <p class="card-text"></p>
+        <br/>
+        <a href="{% url 'nossos_planos' %}" class="btn btn-primary" >Visitar</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <img class="card-img-top" src="{% static "media/pacote.png" %}" alt="Imagem de capa do card">
+      <div class="card-bodyFirstClass">
+        <h3 class="card-title">FIRST CLASS</h3>
+        <p class="card-text"></p>
+        <br/>
+        <a href="{% url 'nossos_planos' %}" class="btn btn-primary" >Visitar</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <br/>
 <br/>
 <br/>
+<br/>
+<br/>
+
+
+<div id="tituloNossosParceiros" class="container container-fluid">
+  <p>NOSSOS PARCEIROS:</p>
+</div>
+
+
+<br/>
+<br/>
+
+
+<div id="figurasParceirosBloco1">
+  <figure class="figure">
+    <img src=  "{% static "media/airbnb.jpg" %}" height="200px" width="195px"  class="figure-img img-fluid rounded" alt="Logo: Airbnb">
+  </figure>
+  
+  <figure class="figure">
+    <img src=  "{% static "media/american_airlines.jpg" %}" height="200px" width="210px" class="figure-img img-fluid rounded" alt="Logo: American Airlines">
+  </figure>
+  
+  <figure class="figure">
+    <img src=  "{% static "media/hilton.png" %}" height="160px" width="164px" class="figure-img img-fluid rounded" alt="Logo: Hilton">
+  </figure>
+  
+  <figure class="figure">
+    <img src=  "{% static "media/localiza.png" %}" height="200px" width="210px" class="figure-img img-fluid rounded" alt="Logo: Localiza">
+  </figure>
+  
+  <figure class="figure">
+    <img src=  "{% static "media/ibis.png" %}" height="100px" width="100px" class="figure-img img-fluid rounded" alt="Logo: Ibis">
+  </figure>
+  
+  <figure class="figure">
+    <img src=  "{% static "media/budget.png" %}" height="200px" width="180px" class="figure-img img-fluid rounded" alt="Logo: Budget">
+  </figure>
+  
+  <figure class="figure">
+    <img src=  "{% static "media/latam.png" %}" height=height="100px" width="100px" class="figure-img img-fluid rounded" alt="Logo: Latam">
+  </figure>
+
+  <figure class="figure">
+    <img src=  "{% static "media/movida.png" %}" height="200px" width="200px" class="figure-img img-fluid rounded" alt="Logo: Movida">
+  </figure>
+  
+  <figure class="figure">
+    <img src=  "{% static "media/uber.png" %}" height="195px" width="190px" class="figure-img img-fluid rounded" alt="Logo: Uber">
+  </figure>
+
+  <figure class="figure">
+    <img src=  "{% static "media/decolar.jpg" %}" height="200px" width="250px" class="figure-img img-fluid rounded" alt="Logo: Decolar">
+  </figure>
+</div>
 
 
 <br/>
@@ -127,12 +220,17 @@ EBBUSINESS
 <br/>
 <br/>
 <br/>
+<br/>
+<br/>
+
 
 <div class="rodape"> 
-    <footer>
-        <p>Ebbusiness</p>
-        <p>Endereço: Rua Indaiatuba, nº 00 Jardim Indaiatuba , Indaiatuba - SP</p>
-        <p>Telefone: 1111-1111 Email: ebbusiness@ebusiness.com.br</p>
-    </footer>
+  <footer>
+  <p>Ebbusiness</p>
+  <p>Endereço: Rua Indaiatuba, nº 00 Jardim Indaiatuba , Indaiatuba - SP</p>
+  <p>Telefone: 1111-1111 Email: ebbusiness@ebusiness.com.br</p>
+  </footer>
 </div>
+
+
 {% endblock %}
