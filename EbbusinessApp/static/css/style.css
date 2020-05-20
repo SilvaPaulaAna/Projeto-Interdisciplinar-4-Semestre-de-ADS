@@ -105,7 +105,10 @@
         width: 100%;
         height: 200px;
     }
-    
+    #cards_a_empresa{
+        width:700px;
+        height: 800px;
+    }   
 }
 @media(max-width:768px) {
     .carousel-inner,.carousel-item active,.imgCarousel{
@@ -143,7 +146,11 @@
     .rodape{
         width: 100%;
         height: 200px;
-    }    
+    }  
+    #cards_a_empresa{
+        width:650px;
+        height: 600px;
+    }   
 }
 @media(max-width:414px) {
     .carousel-inner,.carousel-item active,.imgCarousel{
@@ -181,6 +188,10 @@
         width: 100%;
         height: 200px;
     }    
+    #cards_a_empresa{
+        width:300px;
+        height: 1000px;
+    }   
 }
 
 @media(max-width:375px) {
@@ -219,6 +230,10 @@
         width: 100%;
         height: 200px;
     }   
+    #cards_a_empresa{
+        width:280px;
+        height: 1050px;
+    }   
 }
 @media(max-width:360px){
     .carousel-inner,.carousel-item active,.imgCarousel{
@@ -255,14 +270,23 @@
     .rodape{
         width: 100%;
         height: 200px;
-    }    
+    }   
+    #cards_a_empresa{
+        width:250px;
+        height: 1100px;
+    } 
 }
+
+
+
 /* A empresa*/
 
+#cards_a_empresa{
+    margin-left: 50px;
+}
 
 
-
-
+/*Nossos Planos*/
 
 
 .containers{
@@ -457,50 +481,5 @@ margin-left: 20px;
 height: 150px;
 width: 1310px;
 }
-.item_1{
-background-color: #061129;
-border: 2px 
-transparent #BCB9AE;
-font-size: 16px;
-font-style: oblique;
-float: center;
-margin-left: 10px;
-height: 300px;
-width: 1330px;
-text-align: center;
-}
-.item_2{
-background-color: #061129;
-border: 2px 
-transparent #BCB9AE;
-font-size: 16px;
-float: left;
-margin-left: 10px;
-height: 250px;
-width: 400px;
-margin-top: 174px;
-}
-.item_3{
-    background-color: #061129;
-    border: 2px 
-    transparent #BCB9AE;
-    font-size: 16px;
-    float: left;
-    left: 30px;
-    margin-left: 10px;
-    height: 250px;
-    width: 400px;
-    margin-top: 87px;
-    }
-    .item_4{
-        background-color: #061129;
-        border: 2px 
-        transparent #BCB9AE;
-        font-size: 16px;
-        float: left;
-        left: 30px;
-        margin-left: 10px;
-        height: 250px;
-        width: 512px;
-        margin-top: 0px;
-    }
+
+
