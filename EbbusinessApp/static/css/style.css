@@ -1,3 +1,4 @@
+/*Geral*/
 #body{
     background-image:url("../media/fundo.jpg");
     background-attachment: fixed;
@@ -8,6 +9,15 @@
 }
 
 /*Index*/
+.nav-item{
+    font-size: 25px;
+}
+#textoCarousel1,
+#textoCarousel2,
+#textoCarousel3{
+    font-size: 30px;
+    text-shadow: 2px 2px 2px black; 
+}
 #textoDeApresentacao{
     background-color: #080E33;
     color: white;
@@ -19,12 +29,12 @@
 }
 #tituloSobrePlanos, #tituloNossosParceiros, #tituloEbbusiness{
     background-color: transparent;
-    color: black;
+    color: white;
     font-weight: bold;
     font-size: 40px;
     font-family:'Times New Roman';
     text-align: center;
-    text-shadow: 2px 2px 2px white;
+    text-shadow: 2px 2px 2px black; 
 }
 .card{
     margin-left: 88px;
@@ -68,6 +78,9 @@
     text-shadow: 2px 2px 2px black;
     font-weight: bold;
 }
+
+
+/*Responsividade Personalizada*/
 @media(max-width:800px) { 
     .carousel-inner,.carousel-item active,.imgCarousel{
         width: 100%;
@@ -109,6 +122,10 @@
         width:700px;
         height: 800px;
     }   
+    #cards_nossos_planos{
+        width:102%;
+        height: 600px;
+    }
 }
 @media(max-width:768px) {
     .carousel-inner,.carousel-item active,.imgCarousel{
@@ -149,8 +166,12 @@
     }  
     #cards_a_empresa{
         width:650px;
-        height: 600px;
+        height: 700px;
     }   
+    #cards_nossos_planos{
+        width:102%;
+        height: 600px;
+    }
 }
 @media(max-width:414px) {
     .carousel-inner,.carousel-item active,.imgCarousel{
@@ -190,8 +211,12 @@
     }    
     #cards_a_empresa{
         width:300px;
-        height: 1000px;
+        height: 1330px;
     }   
+    #cards_nossos_planos{
+        width:360px;
+        height: 1500px;
+    }
 }
 
 @media(max-width:375px) {
@@ -232,8 +257,12 @@
     }   
     #cards_a_empresa{
         width:280px;
-        height: 1050px;
+        height: 1500px;
     }   
+    #cards_nossos_planos{
+        width:310px;
+        height: 1500px;
+    }
 }
 @media(max-width:360px){
     .carousel-inner,.carousel-item active,.imgCarousel{
@@ -273,213 +302,100 @@
     }   
     #cards_a_empresa{
         width:250px;
-        height: 1100px;
+        height: 1520px;
     } 
+    #cards_nossos_planos{
+        width:310px;
+        height: 3000px;
+    }
+    #textoCampo{
+        font-size: 14px;
+    }
+    .form-group row{
+        height: 3000px;
+
+    }
 }
 
 
-
 /* A empresa*/
-
+#titulo_a_empresa{
+    color:white;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px black;
+    text-align: center;
+    font-size: 50px;
+}
 #cards_a_empresa{
     margin-left: 50px;
+    font-size: 20px;
 }
 
 
 /*Nossos Planos*/
-
-
-.containers{
-    color:white;
-    display: flex;
-    flex-direction: column;  
-    justify-content: center;   
-    align-items: center;
-}
-
-.tabela_planos{
-    background-color: #737F7B;
-    border-collapse: collapse;
-    margin: 0 auto;
-    width: 68%;
-}
-.tabela_planos td,
-.tabela_planos th{
-    border: 1px #000 solid;
-    font-size: 12px;
-    padding: 25px;
-    text-align: center;
-    text-transform: uppercase;
-    width: 20%;
-}
-.opcoes{
-    color: white;
-} 
-.contato{
-    width: 500px;
-    padding: 20px;
-    background: #ADBFB9;
-    overflow:auto;
-    margin: 0 auto;
-    /* Border style */
-    border: 1px solid #cccccc;
-    -moz-border-radius: 7px;
-    -webkit-border-radius: 7px;
-    border-radius: 7px; 
-    /* Border Shadow */
-    -moz-box-shadow: 2px 2px 2px #cccccc;
-    -webkit-box-shadow: 2px 2px 2px #cccccc;
-    box-shadow: 2px 2px 2px #cccccc;
-}
-
-label {
-    font-family: Arial, Verdana;
-    text-shadow: 2px 2px 2px #3A403E;
-    display: block;
-    float: left; 
-    margin-right:15px;
-    font-weight: bold;
-    margin-right:10px;
-    text-align: right;
-    width: 120px;
-    line-height: 25px;
+#tabelaPrecosPlanos{
+    margin-left:85px ;
+    margin-right:85px ;
     font-size: 20px;
 }
-.button{
-    float: center; 
-    margin-left:15px;
-    margin:20px 55px 20px 0;
+#tituloInformativoNossosPlanos{
+    font-size: 40px;
+    color: white;
+    text-shadow: 4px 4px 4px black;
+    font-family:'Times New Roman';
     font-weight: bold;
-    line-height: 1;
-    padding: 6px 10px;
-    cursor:pointer;
-    color: #fff;
-  
-    text-align: center;
-    text-shadow: 0 1px 1px #64799e;
-  
-    /* Background gradient */
-    background: #a5b8da;
-    background: -moz-linear-gradient
-       (top, #a5b8da 0%, #7089b3 100%);
-    background: -webkit-gradient
-       (linear, 0% 0%, 0% 100%,
-       from(#a5b8da), to(#7089b3));
-  
-    /* Border style */
-    border: 1px solid #5c6f91;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-  
-    /* Box shadow */
-    -moz-box-shadow: inset 0 1px 0 0 #aec3e5;
-    -webkit-box-shadow: inset 0 1px 0 0 #aec3e5;
-    box-shadow: inset 0 1px 0 0 #aec3e5;
-  
-}
-.img1 {
-background-color: #181B24;
-border: 2px 
-transparent #ccc;
-font-size: 14px;
-color: white;
-float: left;
-margin-left: 10px;
-height: 820px;
-width: 400px;
-margin-top: 120px;
-text-shadow: 2px 2px 2px black;
-
-}
-.img2{
-background-color: #26242F;
-border: 2px 
-transparent #ccc;
-font-size: 14px;
-color: white;
-float: left;
-left: 30px;
-height: 820px;
-width: 400px;
-margin-top: 60px;
-margin: 60px;
-text-shadow: 2px 2px 2px black;
-}
-.img3{
-background-color: #3B393B;
-border: 2px 
-transparent #ccc;
-color: white;
-font-size: 14px;
-float: left;
-height:820px;
-width: 400px;
-left: 80px;
-text-shadow: 2px 2px 2px black;
-}
-.img1 h1,.img2 h1,.img3 h1{
-    color: #DED3D4;
-    text-shadow: 2px 2px 2px black;
-}
-
-h1{
-    color: black;
-    text-shadow: 2px 2px 2px white;
     text-align: center;
 }
 
 
-.desc5{
-background-color: #181B24;
-border: 2px 
-transparent #BCB9AE;
-font-size: 18px;
-float: left;
-margin-left: 60px;
-height: 200px;
-width: 400px;
-margin-top: 30px;
+
+/*Contratar*/
+#formularioContratar{
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 550px;
 }
-.desc5 li a,.desc6 li a,.desc7 li a {
-color: white;
-font-size: 14px;
-text-decoration: none;
-list-style-type: none;   
+#elementosFormularioContratar{
+    margin-left: 80px;
 }
-.desc6{
-background-color: #26242F;
-border: 2px 
-transparent #BCB9AE;
-font-size: 18px;
-float: left;
-left: 30px;
-margin-left: 10px;
-height: 200px;
-width: 400px;
-margin-top: 30px;
+#tituloInformativoContratar{
+    font-size: 28px;
+    color: white;
+    text-shadow: 4px 4px 4px black;
+    font-family:'Times New Roman';
+    font-weight: bold;
+    text-align: center;
 }
-.desc7{
-background-color: #3B393B;
-border: 2px 
-transparent #BCB9AE;
-font-size: 18px;
-float: left;
-left: 30px;
-margin-left: 10px;
-height: 200px;
-width: 400px;
-margin-top: 30px;
+
+
+/*Fale Conosco*/
+.was-validated{
+    background-color: white;
+    margin-left: 170px;
+    margin-right: 170px;
+    height: 330px;
+    width: 1000px;
 }
-.desc8{
-background-color: #778A8C;
-border: 2px 
-transparent #BCB9AE;
-font-size: 20px;
-float: center;
-margin-left: 20px;
-height: 150px;
-width: 1310px;
+#elementosFormularioFaleConosco{
+    margin-left: 50px;
+    margin-right: 50px;
 }
+#tituloInformativoFaleConosco{
+    font-size: 30px;
+    color: white;
+    text-shadow: 4px 4px 4px black;
+    font-family:'Times New Roman';
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
 
 

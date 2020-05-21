@@ -4,49 +4,61 @@ EBBUSINESS
 {% endblock title %}
 {% block content %}
 <header>   
-    <nav class="navbar navbar-expand-lg navbar-dark"style="background-color: rgba(0, 0, 0, .5)"; >
-        <a class="navbar-brand" href="#">EBBUSINESS</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'index' %}">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'nossos_planos' %}">Nossos Planos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'contratar' %}">Contratar</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'fale_conosco' %}">Fale Conosco</a>
-            </li>
-          </ul>
-        </div>
-      </nav>   
+  <nav class="navbar navbar-expand-lg navbar-dark"style="background-color: rgba(0, 0, 0, .5)"; >
+    <a class="navbar-brand" href="#">EBBUSINESS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'index' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'nossos_planos' %}">Nossos Planos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contratar' %}">Contratar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'fale_conosco' %}">Fale Conosco</a>
+        </li>
+      </ul>
+    </div>
+  </nav>   
 </header>
 
 
 <br/>
 <br/>
-<h1><strong>EBBUSINESS</strong></h1>
+<div id="titulo_a_empresa">
+  <p>EBBUSINESS</p>
+</div>
+
+
 <br/>
 <br/>
 
+
+
 <div id="cards_a_empresa">
-    <div class="card text-white bg-secondary col-xl-12" style="max-width: 65rem;">
-      <div class="card-header"><h4><strong>Quem somos</strong></h4></div>
-      <div class="card-body">
-        <p>A Ebbusiness foi fundada no ano de 2019 por um grupo de alunos empreendedores da Fatec Indaiatuba, com o 
-          objetivo de se tornar pioneira no campo de viagens de negócios.</p>
-      <p>Situada na cidade de Indaiatuba, interior de São Paulo a Ebbusiness atende a empresas de todo 
-          território nacional.</p>
-      </div>
+  <div class="card text-white bg-secondary col-xl-12" style="max-width: 65rem;">
+    <div class="card-header"><h4><strong>Quem somos</strong></h4></div>
+    <div class="card-body">
+    <p>A Ebbusiness foi fundada no ano de 2019 por um grupo de alunos empreendedores da Fatec Indaiatuba, com o 
+    objetivo de se tornar pioneira no campo de viagens de negócios.</p>
+    <p>Situada na cidade de Indaiatuba, interior de São Paulo a Ebbusiness atende a empresas de todo 
+    território nacional.</p>
     </div>
-    <br/>
-    <div class="card-group">
+  </div>
+
+
+  <br/>
+  <br/>
+  <br/>
+
+
+  <div class="card-group">
     <div class="card text-white bg-info col-lg-12" style="max-width: 18rem;">
       <div class="card-header"><h4><strong>Missão</strong></h4></div>
       <div class="card-body">
@@ -77,10 +89,10 @@ EBBUSINESS
 
 
 <div class="rodape"> 
-<footer>
-<p>Ebbusiness</p>
-<p>Endereço: Rua Indaiatuba, nº 00 Jardim Indaiatuba , Indaiatuba - SP</p>
-<p>Telefone: 1111-1111 Email: ebbusiness@ebusiness.com.br</p>
-</footer>
+  <footer>
+    <p>Ebbusiness</p>
+    <p>Endereço: Rua Indaiatuba, nº 00 Jardim Indaiatuba , Indaiatuba - SP</p>
+    <p>Telefone: 1111-1111 Email: ebbusiness@ebusiness.com.br</p>
+  </footer>
 </div>
 {% endblock %}
