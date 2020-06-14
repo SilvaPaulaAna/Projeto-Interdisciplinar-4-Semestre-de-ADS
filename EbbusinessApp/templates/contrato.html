@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+<form method="post" action="">
+    {% csrf_token %}
+    <div class="modal-header">
+        <h5 class="modal-title">Termos do contrato</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div>
+            <p>
+                Contratante: Qualquer usuário que realizou o cadastro para solicitar um contrato de prestação de serviços relacionados ao gerenciamento de viagens empresariais;
+                Contratado : Ebbusiness, empresa brasileira, portadora do CNPJ nº xx.xxx.xxx/xxx-xx, situada no endereço: Rua Indaiatuba, nº 00 Jardim Indaiatuba , Indaiatuba - SP;
+                Pelo presente instrumento particular de prestação de serviços de gerenciamento de viagens empresariais, têm entre si justos e acordados quanto segue: 
+                DO OBJETO DO CONTRATO
+                CLÁUSULA 1ª: O presente instrumento, tem como objeto, a prestação de serviços relacionados ao gerenciamento de viagens empresariais.  
+                CLÁUSULA 2ª: O contratado executará os serviços diretamente a contratante ou aos funcionários por este indicados.
+                DOS SERVIÇOS
+                CLÁUSULA 3ª : O contratado prestará os seguintes serviços que foram selecionados pelo contratante no site da Ebbusiness, entre os seguintes planos: Classical, Executive ou First Class.
+                DOS HONORÁRIOS
+                CLÁUSULA 4ª: O contratado perceberá o valor integral selecionado pelo contratante no site da Ebbusiness, sendo o valor em Reais que serão cobrados conforme selecionado no site da Ebbusiness, sendo, mensal, semestral ou anual.
+                CLÁUSULA 5ª: Fica estabelecido que são obrigações da Contratante:
+                a) Efetuar o pagamento, de acordo como estabelecido na cláusula quarta do presente contrato.
+                b) Fornecer para o Contratado, cópias dos contratos efetivamente realizados.
+                c) Fornecer ao contratado, materiais e informações, indispensáveis ao seu serviço, facilitando a prospecção dos negócios.
+                d) Fica vedado ao contratante, negociar abatimentos, descontos ou dilações de prazo para o pagamento o execução dos serviços, sem o prévio conhecimento e autorização do contratado. 
+                CLÁUSULA 6ª: Fica estabelecido as seguintes obrigações do Contratado:
+                a) Cumprir o estipulado nos termos do presente instrumento contratual. 
+                b) Obedecer as instruções da contratante, sobre os termos dos serviços à serem prestados aos clientes.
+                c) Prestar informações à contratante, sempre que esta lhe solicitar, informando sobre a execução de seus serviços e demais detalhes sobre a execução de suas atividades. 
+                d)Não revelar detalhes de suas atividades a terceiros, bem como, informações sobre seus clientes.
+                e) Não intermediar abatimentos, descontos, ou dilação sem expressa autorização da contratante. 
+                CLÁUSULA 7ª: São motivos para que o Contratante rescinda o presente instrumento:
+                a) Desídia do contratado no cumprimento das obrigações assumidas para com a contratante e terceiros. 
+                b) Praticar atos, que atinjam a imagem comercial da contratante perante terceiros.
+                c) Deixar de cumprir o contratado, qualquer das cláusulas dispostas no presente instrumento.
+                CLÁUSULA 8ª: São motivos para que o Contratado rescinda o presente instrumento:
+                a) Solicitar a Contratante, atividade que exceda o previsto neste instrumento de contrato.
+                b)Deixar a contratante de observar quaisquer obrigações que conste no presente contrato.
+                c) Deixar a Contratante de cumprir com o disposto na cláusula terceira deste contrato.
+                d) Por motivos de força maior. 
+                CLÁUSULA 9ª: O presente contrato, terá vigência no prazo indicado pelo tipo de assinatura, seja ela mensal, semestral ou anula, sendo renovado automaticamente ao final do período escolhido, porém, havendo interesse em sua rescisão, a parte interessada notificará a parte contraria, por escrito, com antecedência mínima de trinta (30) dias.
+                PARÁGRAFO ÚNICO: A rescisão do presente instrumento de contrato, não extingue os direitos e obrigações que as partes tenham entre si a para com terceiros. 
+                DO FORO
+                CLÁUSULA 10ª: As parte elegem o Foro da Comarca de Campinas - SP, para dirimir judicialmente as controvérsias inerentes do presente contrato. 
+                Uma cópia do contrato, com as informações oficiais do contratante será enviada no e-mail fornecido no ato da contratação do serviço. Esse contrato deve estar assinado, em 2 (duas) vias de igual forma, teor, na presença de testemunhas, e devolvido à Ebbusiness digitalmente para arquivamento no nosso sistema.
+            </p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>        
+      </div> 
+</form>
+    
+{% endblock %}

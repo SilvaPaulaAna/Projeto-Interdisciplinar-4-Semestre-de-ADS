@@ -3,6 +3,7 @@
 EBBUSINESS
 {% endblock title %}
 {% block content %}
+{% load crispy_forms_tags %}
 {% load static %}
 <header>   
   <nav class="navbar navbar-expand-lg navbar-dark"style="background-color: rgba(0, 0, 0, .5)"; >
@@ -49,142 +50,106 @@ EBBUSINESS
 
 <div id="formularioContratar">
   <div id="elementosFormularioContratar">
-    <form>
+    <form method="POST">
+      {% csrf_token %}
       <div class="form-row">
         <div class="form-group col-lg-5">
           <div id="textoCampo">
             <br/>
-            <br/>
-            <label for="nome_empresa">Empresa</label>
-          </div>
-          <input type="text" class="form-control" id="nome_empresa" placeholder="">
+            <br/>  
+            {{form.nomeEmpresa|as_crispy_field}}          
+          </div>          
         </div>
         <div class="form-group col-lg-4">
           <div id="textoCampo">
             <br/>
-            <br/>
-            <label for="nome_para_contato">Nome para contato</label>
-          </div>
-          <input type="text" class="form-control" id="nome_para_contato" placeholder="">
+            <br/>   
+            {{form.nomeContato|as_crispy_field}}         
+          </div>          
         </div>
         <div class="form-group col-lg-2">
           <div id="textoCampo">
             <br/>
             <br/>
-            <label for="cnpj">CNPJ</label>
-          </div>
-          <input type="text" class="form-control" id="cnpj" placeholder="">
+            {{form.numeroCnpj|as_crispy_field}}            
+          </div>          
         </div>
       </div>
       <div class="form-row">
         <div class="form-group col-lg-5">
           <div id="textoCampo">
-            <label for="rua">Rua</label>
-          </div>
-          <input type="text" class="form-control" id="rua" placeholder="">
+            {{form.enderecoRua|as_crispy_field}}
+          </div>          
         </div>
         <div class="form-group col-lg-4">
           <div id="textoCampo">
-            <label for="numero">Nº</label>
-          </div>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="">
+            {{form.enderecoNumero|as_crispy_field}}
+          </div>          
         </div>
         <div class="form-group col-lg-2">
           <div id="textoCampo">
-            <label for="complemento">Complemento</label>
-          </div>
-          <input type="text" class="form-control" id="complemento" placeholder="">
+            {{form.enderecoComplemento|as_crispy_field}}
+          </div>          
         </div>
       </div>
       <div class="form-row">
         <div class="form-group col-lg-5">
           <div id="textoCampo">
-            <label for="cidade">Cidade</label>
-          </div>
-          <input type="text" class="form-control" id="cidade" placeholder="">
+            {{form.cidade|as_crispy_field}}
+          </div>          
         </div>
         <div class="form-group col-lg-4">
           <div id="textoCampo">
-            <label for="Estado">Estado</label>
-          </div>
-            <select id="Estado" class="form-control">
-            <option selected>Escolher...</option>
-            <option>AC</option>
-            <option>AL</option>
-            <option>AP</option>
-            <option>AM</option>
-            <option>BA</option>
-            <option>CE</option>
-            <option>DF</option>
-            <option>ES</option>
-            <option>GO</option>
-            <option>MA</option>
-            <option>MT</option>
-            <option>MS</option>
-            <option>MG</option>
-            <option>PA</option>
-            <option>PB</option>
-            <option>PR</option>
-            <option>PE</option>
-            <option>PI</option>
-            <option>RJ</option>
-            <option>RN</option>
-            <option>RS</option>
-            <option>RO</option>
-            <option>RR</option>
-            <option>SC</option>
-            <option>SP</option>
-            <option>SE</option>
-            <option>TO</option>
-            </select>
+            {{form.estados|as_crispy_field}}
+          </div>            
           </div>
         <div class="form-group col-lg-2">
           <div id="textoCampo">
-            <label for="cep">CEP</label>
-          </div>
-          <input type="text" class="form-control" id="inputCEP" placeholder="">
+            {{form.numeroCep|as_crispy_field}}
+          </div>          
         </div>
         <div class="form-group col-lg-2">
           <div id="textoCampo">
-            <label for="telefone">Telefone</label>
-          </div>
-          <input type="text" class="form-control" id="telefone" placeholder="">
+            {{form.numetoTelefone|as_crispy_field}}
+          </div>          
         </div>
         <div class="form-group col-lg-2">
           <div id="textoCampo">
-            <label for="email">Email</label>
-          </div>
-          <input type="email" class="form-control" id="email" placeholder="">
+            {{form.email|as_crispy_field}}
+          </div>          
         </div>
         <div class="form-group col-lg-2">
           <div id="textoCampo">
-            <label for="plano">Selecione o plano</label>
-          </div>
-          <select id="plano" class="form-control">
-          <option selected>Escolher...</option>
-          <option>Classical</option>
-          <option>Executive</option>
-          <option>First Class</option>
-          </select>
+            {{form.plano|as_crispy_field}}
+          </div>          
         </div>
         <div class="form-group col-lg-2">
           <div id="textoCampo">
-            <label for="assinatura">Selecione a assinatura</label>
+            {{form.assinatura|as_crispy_field}}
           </div>
-          <select id="assinatura" class="form-control">
-          <option selected>Escolher...</option>
-          <option>Mensal</option>
-          <option>Semestral</option>
-          <option>Anual</option>
-          </select>
-        </div>
-      </div>
-      <br/>
+          <div class="modal fade" tabindex="-1" role="dialog" id="modal">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+          
+              </div>
+            </div>
+          </div>         
+        </div>        
+      </div>                 
+      <br/>      
       <div class="form-row">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="gridCheck">
+        <div class="form-check">          
+          {{form.confirmaInformacao|as_crispy_field}}          
+        </div>
+        <div class="form-check">          
+          {{form.confirmaContrato|as_crispy_field}}
+          <a href="#create-book" class="create-book">Clique aqui para acessar os termos do contrato.</a>          
+        </div>        
+      </div>
+      <div class="form-row">
+        <div class="form-check">            
           <label class="form-check-label" for="gridCheck">
-          Confirmo que todas as informações acima são verdadeiras.
+          *Campos obrigatórios.
           </label>
         </div>
       </div>
