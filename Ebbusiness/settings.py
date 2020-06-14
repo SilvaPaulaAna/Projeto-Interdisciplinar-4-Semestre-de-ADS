@@ -82,6 +82,19 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+        #Sera configurado posteriormente
+        # PARA HABILITAR A CONEXÃO ABAIXO, COMENTAR A QUE ESTA ACIMA 
+        # AO FAZER ISSO OS FORMS CRIADOS PELA ANA PARAM DE FUNCIONAR
+            #PRECISAREMOS INSERI-LOS(redireciona-los) PARA O BD
+
+    #'default': {
+        #'ENGINE': 'django.db.backends.postgresql',
+        #'NAME': 'databasename', #OBTER NO BD
+        #'USER': 'username', #OBTER NO BD
+        #'PASSWORD': 'password', #OBTER NO BD
+        #'HOST': '127.0.0.1', #OBTER NO BD - SERVER
+        #'PORT': '5432', 
+    #}
 }
 
 
