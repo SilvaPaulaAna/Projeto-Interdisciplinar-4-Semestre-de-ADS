@@ -1,5 +1,5 @@
 from django import forms
-from .models import Empresas
+from .models import Empresas, Contato
 from bootstrap_modal_forms.forms import BSModalForm
 
 class ContratoForm(BSModalForm):
@@ -37,3 +37,15 @@ class DadosEmpresas(forms.ModelForm):
             'assinatura':'Assinaturas',
         }
         
+class DadosContato(forms.ModelForm):
+    class Meta:
+        model = Contato
+        fields = ('contatoNome', 'contatoEmail', 'contatoMensagem', )
+        labels = {
+            'contatoNome':'Nome',
+            'contatoEmail':'Email',
+            'contatoMensagem':'Mensagem',
+        }
+        widgets = {
+          'contatoMensagem': forms.Textarea(attrs={'rows':4, 'cols':15}),
+        }

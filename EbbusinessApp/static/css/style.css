@@ -370,11 +370,11 @@
 
 
 /*Fale Conosco*/
-.was-validated{
+.FormularioFaleConosco{
     background-color: white;
     margin-left: 170px;
     margin-right: 170px;
-    height: 330px;
+    height: 440px;
     width: 1000px;
 }
 #elementosFormularioFaleConosco{
@@ -389,13 +389,3 @@
     font-weight: bold;
     text-align: center;
 }
-
-
-
-
-
-
-
-
-
-

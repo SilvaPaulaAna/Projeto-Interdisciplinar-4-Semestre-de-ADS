@@ -58,3 +58,8 @@ class Empresas(models.Model):
     ('TO', 'Tocantins'),
     ]
     estados = models.CharField(max_length=2, choices=estadosBrasileiros, default='')
+
+class Contato(models.Model):
+    contatoNome = models.CharField(max_length=100)
+    contatoEmail = models.EmailField()
+    contatoMensagem = models.TextField()
