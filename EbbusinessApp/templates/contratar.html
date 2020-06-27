@@ -52,130 +52,103 @@ EBBUSINESS
 
 
 <div id="formularioContratar">
-  <div id="elementosFormularioContratar">
-    <form method="POST">
+  <form method="POST">
       {% csrf_token %}
-      <div class="form-row">
+      <div class="row">
         <div class="form-group col-lg-5">
-          <div id="textoCampo">
-            <br/>
-            <br/>  
-            {{form.nomeEmpresa|as_crispy_field}}          
-          </div>          
+          <div class="col-formularioContratar">
+            {{form.nomeEmpresa|as_crispy_field}}
+          </div>                 
         </div>
         <div class="form-group col-lg-4">
-          <div id="textoCampo">
-            <br/>
-            <br/>   
+          <div class="col-formularioContratar">
             {{form.nomeContato|as_crispy_field}}         
           </div>          
         </div>
-        <div class="form-group col-lg-2">
-          <div id="textoCampo">
-            <br/>
-            <br/>
+        <div class="form-group col-lg-3">
+          <div class="formularioContratar">
             {{form.numeroCnpj|as_crispy_field}}            
           </div>          
         </div>
       </div>
-      <div class="form-row">
+      <div class="row">
         <div class="form-group col-lg-5">
-          <div id="textoCampo">
+          <div class="formularioContratar">
             {{form.enderecoRua|as_crispy_field}}
           </div>          
         </div>
         <div class="form-group col-lg-4">
-          <div id="textoCampo">
+          <div class="formularioContratar">
             {{form.enderecoNumero|as_crispy_field}}
           </div>          
         </div>
-        <div class="form-group col-lg-2">
-          <div id="textoCampo">
+        <div class="form-group col-lg-3">
+          <div class="formularioContratar">
             {{form.enderecoComplemento|as_crispy_field}}
           </div>          
         </div>
       </div>
-      <div class="form-row">
+      <div class="row">
         <div class="form-group col-lg-5">
-          <div id="textoCampo">
+          <div class="formularioContratar">
             {{form.cidade|as_crispy_field}}
           </div>          
         </div>
         <div class="form-group col-lg-4">
-          <div id="textoCampo">
+          <div class="formularioContratar">
             {{form.estados|as_crispy_field}}
-          </div>            
           </div>
-        <div class="form-group col-lg-2">
-          <div id="textoCampo">
+        </div>
+        <div class="form-group col-lg-3">
+          <div class="formularioContratar">
             {{form.numeroCep|as_crispy_field}}
           </div>          
         </div>
-        <div class="form-group col-lg-2">
-          <div id="textoCampo">
+      </div>
+      <div class="row">
+        <div class="form-group col-lg-3">
+          <div class="formularioContratar">
             {{form.numetoTelefone|as_crispy_field}}
           </div>          
         </div>
-        <div class="form-group col-lg-2">
-          <div id="textoCampo">
+        <div class="form-group col-lg-3">
+          <div class="formularioContratar">
             {{form.email|as_crispy_field}}
           </div>          
         </div>
-        <div class="form-group col-lg-2">
-          <div id="textoCampo">
+        <div class="form-group col-lg-3">
+          <div class="formularioContratar">
             {{form.plano|as_crispy_field}}
           </div>          
         </div>
-        <div class="form-group col-lg-2">
-          <div id="textoCampo">
+        <div class="form-group col-lg-3">
+          <div class="formularioContratar">
             {{form.assinatura|as_crispy_field}}
           </div>
           <div class="modal fade" tabindex="-1" role="dialog" id="modal">
             <div class="modal-dialog" role="document">
-              <div class="modal-content">
-          
-              </div>
+              <div class="modal-content"></div>
             </div>
           </div>         
         </div>        
-      </div>                 
+      </div>                
       <br/>      
-      <div class="form-row">
+      <div class="row">
         <div class="form-check">          
-          {{form.confirmaInformacao|as_crispy_field}}          
+          {{form.confirmaInformacao|as_crispy_field}}
+          <label class="form-check-label" for="gridCheck">
+            *Campos obrigatórios.
+            </label>
         </div>
         <div class="form-check">          
           {{form.confirmaContrato|as_crispy_field}}
-          <a href="#create-book" class="create-book">Clique aqui para acessar os termos do contrato.</a>          
+          <a href="#abrir-contrato" class="abrir-contrato">Clique aqui para acessar os termos do contrato.</a>          
         </div>        
-      </div>
-      <div class="form-row">
-        <div class="form-check">            
-          <label class="form-check-label" for="gridCheck">
-          *Campos obrigatórios.
-          </label>
-        </div>
       </div>
       <br/>
       <button type="submit" class="btn btn-primary">Contratar</button>
     </form>
-  </div>
 </div>
-
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 
 
 <div class="rodape"> 

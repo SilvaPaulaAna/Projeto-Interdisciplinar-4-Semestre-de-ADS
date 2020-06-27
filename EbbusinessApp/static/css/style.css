@@ -347,18 +347,38 @@
     text-align: center;
 }
 
-
-
 /*Contratar*/
 #formularioContratar{
+    border-radius: 5px;
     background-color: white;
-    margin-left: 50px;
-    margin-right: 50px;
-    height: 650px;
+    padding: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20%;    
+    float: center;
 }
-#elementosFormularioContratar{
-    margin-left: 80px;
+
+.col-formularioContratar {
+    float: left;
+    width: 100%;
 }
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.form-check{
+    float: left;
+    padding: 0.5%;
+}
+
+.abrir-contrato{
+    float: left;
+    padding: 0.5%;
+}
+
 #tituloInformativoContratar{
     font-size: 28px;
     color: white;
@@ -370,17 +390,21 @@
 
 
 /*Fale Conosco*/
-.FormularioFaleConosco{
+#FormularioFaleConosco{
+    border-radius: 5px;
     background-color: white;
-    margin-left: 170px;
-    margin-right: 170px;
-    height: 440px;
-    width: 1000px;
+    padding: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20%;  
+    float: center;
 }
-#elementosFormularioFaleConosco{
-    margin-left: 50px;
-    margin-right: 50px;
+
+.col-formularioFaleConosco {
+    float: left;
+    width: 100%;
 }
+
 #tituloInformativoFaleConosco{
     font-size: 30px;
     color: white;

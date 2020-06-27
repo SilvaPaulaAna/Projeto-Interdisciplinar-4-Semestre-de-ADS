@@ -14,6 +14,6 @@ urlpatterns = [
     url(r'^fale_conosco/', fale_conosco, name='fale_conosco'),
     url(r'^contratar/', contratar, name='contratar'),
     url(r'^salvo/', salvo, name='salvo'),
-    url(r'^create/', CreatePopUpView.as_view(), name='create_book'),
+    url(r'^create/', CreatePopUpView.as_view(), name='abrir-contrato'),
     url(r'', index, name='index'),
 ]
