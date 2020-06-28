@@ -51,25 +51,125 @@ EBBUSINESS
 <br/>
 
 
-<div id="formularioContratar">
-    <div id="elementosFormularioContratar">
+<div id="ContratoSalvo">
+  <form method="POST">
+    {% csrf_token %}
+    <div class="row">
+      <div class="form-group col-lg-12">
+        <h4>Parabéns! Agora você faz parte da equipe Ebbusiness.</h4>
+        <p>Muito obrigado por adquirir um de nossos serviços.
+          Estaremos ao seu lado em todos os momentos!
+        </p>
+        <p>Confira abaixo o resumo do seu pedido.</p>
+      </div>    
+    </div>  
+    <div class="row">
+      <div class="form-group col-lg-3">
+        <div class="col-tituloContratoSalvo">
+          <h5>Número do contrato:</h4>
+        </div>
+      </div>
+      <div class="form-group col-lg-3">
+        <div class="col-contratoSalvo">
+          <script>document.write( new Date().getFullYear() ); </script>.{{data.numeroCnpj.value}}
+        </div>
+      </div>
     </div>
+    <div class="row">
+      <div class="form-group col-lg-2">
+        <div class="col-tituloContratoSalvo">
+          <h5>Empresa:</h4>
+        </div>
+      </div>
+      <div class="form-group col-lg-3 ">
+        <div class="col-contratoSalvo">
+          {{data.nomeEmpresa.value}}
+        </div>
+      </div>
+      <div class="form-group col-lg-2">
+        <div class="tituloContratoSalvo">
+          <h5>Número CNPJ:</h4>           
+        </div>          
+      </div>
+      <div class="form-group col-lg-2">
+        <div class="col-contratoSalvo">
+          {{data.numeroCnpj.value}} 
+        </div>
+      </div>   
+    </div>
+
+    <div class="row">    
+      <div class="form-group col-lg-2">
+        <div class="tituloContratoSalvo">
+          <h5>Plano:</h4>
+        </div>          
+      </div>    
+      <div class="form-group col-lg-3">
+        <div class="contratoSalvo">        
+          {% if data.plano.value == '1' %}
+            <p>Classical</p>        
+          {% elif data.plano.value == '2' %}
+            <p>Executive</p>        
+          {% elif data.plano.value == '3' %}
+            <p>First Class</p>
+          {% endif %}        
+        </div>          
+      </div>
+      <div class="form-group col-lg-2">
+        <div class="tituloContratoSalvo">
+          <h5>Assinatura:</h4>
+        </div>          
+      </div>
+      <div class="form-group col-lg-2">
+        <div class="contratoSalvo">
+          {% if data.assinatura.value == '1' %}
+            <p>Mensal</p>
+          {% elif data.assinatura.value == '2' %}
+            <p>Semestral</p>
+          {% elif data.assinatura.value == '3' %}
+            <p>Anual</p>
+          {% endif %}
+        </div>
+      </div>
+      <div class="form-group col-lg-1">
+        <div class="col-tituloContratoSalvo">
+          <h5>Valor:</h4>
+        </div>
+      </div>
+      <div class="form-group col-lg-2 ">
+        <div class="col-contratoSalvo">
+          {% if data.assinatura.value == '1' and  data.plano.value == '1' %}
+            <p>R$ 700,00</p>
+          {% elif data.assinatura.value == '1' and data.plano.value == '2' %}
+            <p>R$ 4620,00</p>
+          {% elif data.assinatura.value == '1' and data.plano.value == '3' %}
+            <p>R$ 9.660,00</p>
+          {% elif data.assinatura.value == '2' and data.plano.value == '1' %}
+            <p>R$ 875,00</p>
+          {% elif data.assinatura.value == '2' and data.plano.value == '2' %}
+            <p>R$ 5.775,00</p>
+          {% elif data.assinatura.value == '2' and data.plano.value == '3' %}
+            <p>R$ 12.075,00</p>
+          {% elif data.assinatura.value == '3' and data.plano.value == '1' %}
+            <p>R$ 1.225,00</p>
+          {% elif data.assinatura.value == '3' and data.plano.value == '2' %}
+            <p>R$ 8.805,00</p>
+          {% elif data.assinatura.value == '3' and data.plano.value == '3' %}
+            <p>R$ 16.905,00</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-lg-12">
+        <P>O contrato oficial, com todos os termos, será enviado no email: {{data.email.value}}, 
+          aos cuidados de {{data.nomeContato.value}}.
+        </P>      
+      </div>    
+    </div>
+    <button type="submit" class="btn btn-primary">Gerar PDF</button>  
+  </form>
 </div>
-
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 
 
 <div class="rodape"> 

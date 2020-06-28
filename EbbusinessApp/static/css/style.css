@@ -369,12 +369,7 @@
     clear: both;
 }
 
-.form-check{
-    float: left;
-    padding: 0.5%;
-}
-
-.abrir-contrato{
+.formCheck{
     float: left;
     padding: 0.5%;
 }
@@ -386,6 +381,27 @@
     font-family:'Times New Roman';
     font-weight: bold;
     text-align: center;
+}
+
+/*Contrato Salvo*/
+#ContratoSalvo{
+    border-radius: 5px;
+    background-color: white;
+    padding: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20%;    
+    float: center;
+}
+
+.col-tituloContratoSalvo{
+    float: center;
+    resize: both;
+}
+
+.col-contratoSalvo{
+    float: center;
+    resize: both;
 }
 
 

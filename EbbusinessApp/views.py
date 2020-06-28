@@ -18,12 +18,13 @@ def nossos_planos(request):
     return render(request, 'nossos_planos.html')
 
 def contratar(request):
+    dados = {}
     if request.method == 'POST':
         form = DadosEmpresas(request.POST)
         if form.is_valid():
             form.save()
-            return render(request, 'salvo_contrato.html')
-    
+        dados['data'] = form           
+        return render(request, 'salvo_contrato.html', dados)    
     form = DadosEmpresas()
     return render(request, 'contratar.html', {'form':form})
 
@@ -38,4 +39,4 @@ def fale_conosco(request):
     return render(request, 'fale_conosco.html', {'form':form})
 
 def salvo(request):
-    return render(request, 'salvo.html')
+    return render(request, 'salvo_contrato.html')

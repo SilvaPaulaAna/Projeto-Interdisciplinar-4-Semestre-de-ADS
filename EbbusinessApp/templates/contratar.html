@@ -134,16 +134,20 @@ EBBUSINESS
       </div>                
       <br/>      
       <div class="row">
-        <div class="form-check">          
-          {{form.confirmaInformacao|as_crispy_field}}
-          <label class="form-check-label" for="gridCheck">
-            *Campos obrigatórios.
-            </label>
+        <div class="form-group col-lg-6">
+          <div class="formCheck">          
+            {{form.confirmaInformacao|as_crispy_field}}
+            <label class="form-check-label" for="gridCheck">
+              *Campos obrigatórios.
+              </label>
+          </div>
         </div>
-        <div class="form-check">          
-          {{form.confirmaContrato|as_crispy_field}}
-          <a href="#abrir-contrato" class="abrir-contrato">Clique aqui para acessar os termos do contrato.</a>          
-        </div>        
+        <div class="form-group col-lg-6">
+          <div class="formCheck">          
+            {{form.confirmaContrato|as_crispy_field}}
+            <a href="#abrir-contrato" class="abrir-contrato">Clique aqui para acessar os termos do contrato.</a>          
+          </div>          
+        </div>
       </div>
       <br/>
       <button type="submit" class="btn btn-primary">Contratar</button>
