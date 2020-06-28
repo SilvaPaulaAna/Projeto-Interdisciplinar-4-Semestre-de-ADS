@@ -23,7 +23,7 @@ EBBUSINESS
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'nossos_planos' %}">Nossos Planos</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="{% url 'contratar' %}">Contratar</a>
             </li>
             <li class="nav-item">
@@ -167,7 +167,14 @@ EBBUSINESS
         </P>      
       </div>    
     </div>
-    <button type="submit" class="btn btn-primary">Gerar PDF</button>  
+    <div class="row">
+      <div class="form-group col-lg-6">
+        <button id="contratoSalvoBotao"  onclick="window.print()" class="btn btn-primary">Gerar PDF</button>
+      </div>       
+      <div class="form-group col-lg-6">
+        <a id="contratoSalvoBotao" class="btn btn-secondary" href="/">Sair</a>
+      </div> 
+    </div>
   </form>
 </div>
 

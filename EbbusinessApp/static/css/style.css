@@ -404,6 +404,9 @@
     resize: both;
 }
 
+#contratoSalvoBotao{
+    float: center;
+}
 
 /*Fale Conosco*/
 #FormularioFaleConosco{
