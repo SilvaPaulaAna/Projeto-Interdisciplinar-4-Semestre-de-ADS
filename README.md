@@ -4,15 +4,15 @@
 * Inicialização do diretório por **Ana Paula Dutra**
 
 ## ================== Membros
-	Ana P. D. Silva
-	Ramon T. Goncalves
-	Sidnei P. Souza
+	Ana Paula Dutra da Silva
+	Ramon Tadeu Goncalves
+	Sidnei Pereira de Souza
 
 ## Definições do "banco de dados":
 	Banco utilizado: POSTGRE
 	Nome do banco: ebbusiness
 
-### Como iniciar esta apliação
+### Como testar esta apliação
 	1 - Instalar Python
 	2 - Instalar Django através do PIP (Pyhton Installer Packages)
 	3 - Instalar extensões auxiliares
@@ -25,26 +25,35 @@
 		5.2 - MIGRATE - Transfere os dados para banco
 
 
+
+
 ## ----- Conteúdo do diretório -----
 
 ### ================== RAIZ
 	[folder] Ebbusiness
-	[folder] EbbusinessApp
-		[file] db.sqlite3
-		[file] manage.py
-		[file] README.md -------- Este arquivo de apresentação
+		[folder] __pyCache__
+		[folder] EbbusinessApp
+			[file] db.sqlite3
+			[file] manage.py
+			[file] asgi.py
+			[file] wsgi.py
+			[file] urls.py
+			[file] README.md
 			 
 ### ================== EbbusinessApp
-	[folder] __pyCache__  	(Arquivos auto-compilados de execução do servidor DJANGO)
-	* Estes arquivos definem as variáveis de nome do projeto e pasta principal,
-	* Caso a pasta principal seja renomada o servidor não será carregado, consequentemente suas páginas não exibidas
-
-	[folder] templates		(Pasta onde ficam os arquivos HTML e CSS)
+	[folder] __pyCache__ 
+	[folder] templates
+	[folder] migrations
+	[folder] static
 		[file] __init__.py
 		[file] asgi.py
 		[file] settings.py
-		[file] urls.py (Configura os endereços WEB/HTML)
+		[file] urls.py
 		[file] wsgi.py
-		[file] manage.py (executa as funções do DJANGO com comando "python manage.py COMANDO")
+		[file] manage.py
+		[file] models.py
+		[file] form.py
+		[file] tests.py
+		[file] views.py
 
 
