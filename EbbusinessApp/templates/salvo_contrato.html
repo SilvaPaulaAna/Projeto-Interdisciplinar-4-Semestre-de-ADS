@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+{% block title %}
+EBBUSINESS
+{% endblock title %}
+{% block content %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+<header>   
+    <nav class="navbar navbar-expand-lg navbar-dark"style="background-color: rgba(0, 0, 0, .5)"; >
+        <a class="navbar-brand" href="#">EBBUSINESS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'a_empresa' %}">A empresa</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'nossos_planos' %}">Nossos Planos</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'contratar' %}">Contratar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'fale_conosco' %}">Fale conosco</a>
+            </li>
+          </ul>
+        </div>
+      </nav>   
+</header>
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+<div id="tituloInformativoContratar">
+  <p>CONTRATO ENVIADO COM SUCESSO!</p>
+</div>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+<div id="ContratoSalvo">
+  <form method="POST">
+    {% csrf_token %}
+    <div class="row">
+      <div class="form-group col-lg-12">
+        <h4>Parabéns! Agora você faz parte da equipe Ebbusiness.</h4>
+        <p>Muito obrigado por adquirir um de nossos serviços.
+          Estaremos ao seu lado em todos os momentos!
+        </p>
+        <p>Confira abaixo o resumo do seu pedido.</p>
+      </div>    
+    </div>  
+    <div class="row">
+      <div class="form-group col-lg-3">
+        <div class="col-tituloContratoSalvo">
+          <h5>Número do contrato:</h4>
+        </div>
+      </div>
+      <div class="form-group col-lg-3">
+        <div class="col-contratoSalvo">
+          <script>document.write( new Date().getFullYear() ); </script>.{{data.numeroCnpj.value}}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-lg-2">
+        <div class="col-tituloContratoSalvo">
+          <h5>Empresa:</h4>
+        </div>
+      </div>
+      <div class="form-group col-lg-3 ">
+        <div class="col-contratoSalvo">
+          {{data.nomeEmpresa.value}}
+        </div>
+      </div>
+      <div class="form-group col-lg-2">
+        <div class="tituloContratoSalvo">
+          <h5>Número CNPJ:</h4>           
+        </div>          
+      </div>
+      <div class="form-group col-lg-2">
+        <div class="col-contratoSalvo">
+          {{data.numeroCnpj.value}} 
+        </div>
+      </div>   
+    </div>
+
+    <div class="row">    
+      <div class="form-group col-lg-2">
+        <div class="tituloContratoSalvo">
+          <h5>Plano:</h4>
+        </div>          
+      </div>    
+      <div class="form-group col-lg-3">
+        <div class="contratoSalvo">        
+          {% if data.plano.value == '1' %}
+            <p>Classical</p>        
+          {% elif data.plano.value == '2' %}
+            <p>Executive</p>        
+          {% elif data.plano.value == '3' %}
+            <p>First Class</p>
+          {% endif %}        
+        </div>          
+      </div>
+      <div class="form-group col-lg-2">
+        <div class="tituloContratoSalvo">
+          <h5>Assinatura:</h4>
+        </div>          
+      </div>
+      <div class="form-group col-lg-2">
+        <div class="contratoSalvo">
+          {% if data.assinatura.value == '1' %}
+            <p>Mensal</p>
+          {% elif data.assinatura.value == '2' %}
+            <p>Semestral</p>
+          {% elif data.assinatura.value == '3' %}
+            <p>Anual</p>
+          {% endif %}
+        </div>
+      </div>
+      <div class="form-group col-lg-1">
+        <div class="col-tituloContratoSalvo">
+          <h5>Valor:</h4>
+        </div>
+      </div>
+      <div class="form-group col-lg-2 ">
+        <div class="col-contratoSalvo">
+          {% if data.assinatura.value == '1' and  data.plano.value == '1' %}
+            <p>R$ 700,00</p>
+          {% elif data.assinatura.value == '1' and data.plano.value == '2' %}
+            <p>R$ 4620,00</p>
+          {% elif data.assinatura.value == '1' and data.plano.value == '3' %}
+            <p>R$ 9.660,00</p>
+          {% elif data.assinatura.value == '2' and data.plano.value == '1' %}
+            <p>R$ 875,00</p>
+          {% elif data.assinatura.value == '2' and data.plano.value == '2' %}
+            <p>R$ 5.775,00</p>
+          {% elif data.assinatura.value == '2' and data.plano.value == '3' %}
+            <p>R$ 12.075,00</p>
+          {% elif data.assinatura.value == '3' and data.plano.value == '1' %}
+            <p>R$ 1.225,00</p>
+          {% elif data.assinatura.value == '3' and data.plano.value == '2' %}
+            <p>R$ 8.805,00</p>
+          {% elif data.assinatura.value == '3' and data.plano.value == '3' %}
+            <p>R$ 16.905,00</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-lg-12">
+        <P>O contrato oficial, com todos os termos, será enviado no email: {{data.email.value}}, 
+          aos cuidados de {{data.nomeContato.value}}.
+        </P>      
+      </div>    
+    </div>
+    <div class="row">
+      <div class="form-group col-lg-6">
+        <button id="contratoSalvoBotao"  onclick="window.print()" class="btn btn-primary">Gerar PDF</button>
+      </div>       
+      <div class="form-group col-lg-6">
+        <a id="contratoSalvoBotao" class="btn btn-secondary" href="/">Sair</a>
+      </div> 
+    </div>
+  </form>
+</div>
+
+
+<div class="rodape"> 
+    <footer>
+        <p>Ebbusiness</p>
+        <p>Endereço: Rua Indaiatuba, nº 00 Jardim Indaiatuba , Indaiatuba - SP</p>
+        <p>Telefone: 1111-1111 Email: ebbusiness@ebusiness.com.br</p>
+    </footer>
+</div>
+
+{% endblock %}

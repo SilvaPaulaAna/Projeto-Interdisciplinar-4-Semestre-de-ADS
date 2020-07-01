@@ -1,4 +1,5 @@
 from django.conf.urls import url
+from EbbusinessApp.views import CreatePopUpView
 from EbbusinessApp.views import index
 from EbbusinessApp.views import a_empresa
 from EbbusinessApp.views import nossos_planos
@@ -13,4 +14,6 @@ urlpatterns = [
     url(r'^fale_conosco/', fale_conosco, name='fale_conosco'),
     url(r'^contratar/', contratar, name='contratar'),
     url(r'^salvo/', salvo, name='salvo'),
+    url(r'^create/', CreatePopUpView.as_view(), name='abrir-contrato'),
+    url(r'', index, name='index'),
 ]

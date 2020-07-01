@@ -40,8 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'EbbusinessApp',
+    'crispy_forms',
+    'bootstrap_modal_forms',
   
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -79,8 +83,12 @@ WSGI_APPLICATION = 'Ebbusiness.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.environ.get('DB_NAME', 'ebbusiness'),
+        'USER': os.environ.get('DB_USER', 'postgres'),
+        'PASSWORD': os.environ.get('DB_PASS', '123'),
+        'HOST': 'localhost',
+        'PORT': '5433',
     }
         #Sera configurado posteriormente
         # PARA HABILITAR A CONEXÃO ABAIXO, COMENTAR A QUE ESTA ACIMA 

@@ -1,36 +1,66 @@
 
-
 from django.db import models
 
-class cliente(models.Model):
-    empresa = models.CharField(max_length=15)
+# Create your models here.
+
+class Planos(models.Model):
+    planos = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.planos
+
+class Assinaturas(models.Model):
+    assinaturas = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.assinaturas
+
+class Empresas(models.Model):
+    nomeEmpresa = models.CharField(max_length=100)
     nomeContato = models.CharField(max_length=100)
-    cnpj = models.CharField(max_length=19)
-    rua = models.CharField(max_length=40)
-    numero = models.CharField(max_length=5)
-    complemento = models.CharField(max_length=25)
-    cidade = models.CharField(max_length=22)
-    uf = models.CharField(max_length=2) #ESTADO
-    cep = models.CharField(max_length=10)
-    telefone = models.CharField(max_length=14)
+    numeroCnpj = models.CharField(max_length=18, primary_key=True)
+    enderecoRua = models.CharField(max_length=100)
+    enderecoNumero = models.CharField(max_length=10)
+    enderecoComplemento = models.CharField(max_length=100, blank=True)
+    cidade = models.CharField(max_length=100)
+    numeroCep = models.CharField(max_length=10)
+    numetoTelefone = models.CharField(max_length=14)
     email = models.EmailField()
-    #plano =    #LINK com a classe PLANOS
-    #assinatura =   #LINK com a classe ASSINATURAS
+    plano = models.ForeignKey(Planos, on_delete=models.CASCADE)
+    assinatura = models.ForeignKey(Assinaturas, on_delete=models.CASCADE)    
+    estadosBrasileiros = [
+    ('', 'Escolher...'),
+    ('AC', 'Acre'),
+    ('AL', 'Alagoas'),
+    ('AP', 'Amapá'),
+    ('AM', 'Amazonas'),
+    ('BA', 'Bahia'),
+    ('CE', 'Ceará'),
+    ('DF', 'Distrito Federal'),
+    ('ES', 'Espírito Santo'),
+    ('GO', 'Goiás'),
+    ('MA', 'Maranhão'),
+    ('MT', 'Mato Grosso'),
+    ('MS', 'Mato Grosso do Sul'),
+    ('MG', 'Minas Gerais'),
+    ('PA', 'Pará'),
+    ('PB', 'Paraíba'),
+    ('PR', 'Paraná'),
+    ('PE', 'Pernambuco'),
+    ('PI', 'Piauí'),
+    ('RJ', 'Rio de Janeiro'),
+    ('RN', 'Rio Grande do Norte'),
+    ('RS', 'Rio Grande do Sul'),
+    ('RO', 'Rondônia'),
+    ('RR', 'Roraima'),
+    ('SC', 'Santa Catarina'),
+    ('SP', 'São Paulo'),
+    ('SE', 'Sergipe'),
+    ('TO', 'Tocantins'),
+    ]
+    estados = models.CharField(max_length=2, choices=estadosBrasileiros, default='')
 
-
-#class preco
-
-
-#class contrato
-
-
-
-
-
-
-
-### ======================== TESTS
-#cnpj(19) 05.454.389/0001-69
-#cidade(22) sao jose do rio preto
-#cep(10) 13348-090
-#telefone(14) 19 99377-6771
+class Contato(models.Model):
+    contatoNome = models.CharField(max_length=100)
+    contatoEmail = models.EmailField()
+    contatoMensagem = models.TextField()

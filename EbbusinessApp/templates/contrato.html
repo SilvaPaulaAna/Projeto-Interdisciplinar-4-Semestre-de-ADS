@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+{% load static %}
+<style>
+    /* CSS imbutido no HTML para identar tags com a CLASS INDENT*/
+    .indent {
+        margin-left: 40px;
+    }
+</style>
+
+<form method="post" action="">
+    {% csrf_token %}
+    <div class="modal-header">
+        <h2 class="modal-title">Termos do contrato</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div>
+            <p>
+                <b class="indent">Contratante:</b> Qualquer usuário que realizou o cadastro para solicitar um contrato de prestação de serviços relacionados ao gerenciamento de viagens empresariais;<br>
+                
+                <b class="indent">Contratado:</b> Ebbusiness, empresa brasileira, portadora do CNPJ nº xx.xxx.xxx/xxx-xx, situada no endereço: Rua Indaiatuba, nº 00 Jardim Indaiatuba , Indaiatuba - SP;<br>
+                
+                <span class="indent">Pelo presente instrumento particular de prestação de serviços de gerenciamento de viagens empresariais, têm entre si justos e acordados quanto segue: </span>
+                
+        <H4>DO OBJETO DO CONTRATO</H4>
+                <b class="indent">CLÁUSULA 1ª:</b> O presente instrumento, tem como objeto, a prestação de serviços relacionados ao gerenciamento de viagens empresariais.<br>
+                <b class="indent">CLÁUSULA 2ª:</b> O contratado executará os serviços diretamente a contratante ou aos funcionários por este indicados.
+                DOS SERVIÇOS<br>
+                <b class="indent">CLÁUSULA 3ª:</b> O contratado prestará os seguintes serviços que foram selecionados pelo contratante no site da Ebbusiness, entre os seguintes planos: Classical, Executive ou First Class.<br>
+            
+        <h4>DOS HONORÁRIOS</h4>
+            <b class="indent">CLÁUSULA 4ª:</b> O contratado perceberá o valor integral selecionado pelo contratante no site da Ebbusiness, sendo o valor em Reais que serão cobrados conforme selecionado no site da Ebbusiness, sendo, mensal, semestral ou anual.<br>
+            <b class="indent">CLÁUSULA 5ª:</b> Fica estabelecido que são obrigações da Contratante:<br>
+                a) Efetuar o pagamento, de acordo como estabelecido na cláusula quarta do presente contrato.<br>
+                b) Fornecer para o Contratado, cópias dos contratos efetivamente realizados.<br>
+                c) Fornecer ao contratado, materiais e informações, indispensáveis ao seu serviço, facilitando a prospecção dos negócios.<br>
+                d) Fica vedado ao contratante, negociar abatimentos, descontos ou dilações de prazo para o pagamento o execução dos serviços, sem o prévio conhecimento e autorização do contratado. <br>
+            <b class="indent">CLÁUSULA 6ª:</b> Fica estabelecido as seguintes obrigações do Contratado:<br>
+                a) Cumprir o estipulado nos termos do presente instrumento contratual. <br>
+                b) Obedecer as instruções da contratante, sobre os termos dos serviços à serem prestados aos clientes.<br>
+                c) Prestar informações à contratante, sempre que esta lhe solicitar, informando sobre a execução de seus serviços e demais detalhes sobre a execução de suas atividades. <br>
+                d) Não revelar detalhes de suas atividades a terceiros, bem como, informações sobre seus clientes.<br>
+                e) Não intermediar abatimentos, descontos, ou dilação sem expressa autorização da contratante. <br>
+            <b class="indent">CLÁUSULA 7ª:</b> São motivos para que o Contratante rescinda o presente instrumento:<br>
+                a) Desídia do contratado no cumprimento das obrigações assumidas para com a contratante e terceiros. <br>
+                b) Praticar atos, que atinjam a imagem comercial da contratante perante terceiros.<br>
+                c) Deixar de cumprir o contratado, qualquer das cláusulas dispostas no presente instrumento.<br>
+            <b class="indent">CLÁUSULA 8ª:</b> São motivos para que o Contratado rescinda o presente instrumento:<br>
+                a) Solicitar a Contratante, atividade que exceda o previsto neste instrumento de contrato.<br>
+                b) Deixar a contratante de observar quaisquer obrigações que conste no presente contrato.<br>
+                c) Deixar a Contratante de cumprir com o disposto na cláusula terceira deste contrato.<br>
+                d) Por motivos de força maior. <br>
+            <b class="indent">CLÁUSULA 9ª:</b> O presente contrato, terá vigência no prazo indicado pelo tipo de assinatura, seja ela mensal, semestral ou anula, sendo renovado automaticamente ao final do período escolhido, porém, havendo interesse em sua rescisão, a parte interessada notificará a parte contraria, por escrito, com antecedência mínima de trinta (30) dias.<br>
+            
+            <p>
+            <span class="indent">PARÁGRAFO ÚNICO:</span> A rescisão do presente instrumento de contrato, não extingue os direitos e obrigações que as partes tenham entre si a para com terceiros.</p>
+            
+        <h4>DO FORO</h4>
+            <b class="indent">CLÁUSULA 10ª:</b> As parte elegem o Foro da Comarca de Campinas - SP, para dirimir judicialmente as controvérsias inerentes do presente contrato. Uma cópia do contrato, com as informações oficiais do contratante será enviada no e-mail fornecido no ato da contratação do serviço. Esse contrato deve estar assinado, em 2 (duas) vias de igual forma, teor, na presença de testemunhas, e devolvido à Ebbusiness digitalmente para arquivamento no nosso sistema.
+            </p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>        
+      </div> 
+</form>
+    
+{% endblock %}
